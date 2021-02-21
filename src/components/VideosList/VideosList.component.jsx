@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import VideoCard from '../VideoCard';
 
 const Container = styled.div`
-    display: block;
+  display: block;
 `;
 
 const Title = styled.h2`
@@ -22,8 +22,8 @@ function VideosListComponent({ title, items }) {
       <Title>{title}</Title>
       <List>
         {items
-          .filter(({ id: { kind } }) => kind === "youtube#video")
-          .map(({ snippet:{title, description, thumbnails:{medium: {url}}} }) => (
+          .filter(({ id: { kind } }) => kind === 'youtube#video')
+          .map(({ snippet: { title, description, thumbnails: { medium: { url } } } }) => (
             <VideoCard image={url} title={title} desc={description} />
           ))}
       </List>
