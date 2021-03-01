@@ -55,10 +55,10 @@ const VideoCard = ({ image, title, desc }) => {
   return (
     <Container>
       <Button>
-        <Image image={image} />
+        <Image data-testid="image" image={image} />
         <TextArea>
           <Title>{title}</Title>
-          <Desc>{desc}&nbsp;</Desc>
+          <Desc>{desc}</Desc>
         </TextArea>
       </Button>
     </Container>
