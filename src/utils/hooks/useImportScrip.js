@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 const useImportScript = (resourceUrl) => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const useImportScript = (resourceUrl) => {
       if (window.gapi) {
         window.gapi.load('client');
       }
-      //this.loadClient();
+      // this.loadClient();
     };
     document.body.appendChild(script);
     return () => {

@@ -1,9 +1,9 @@
-import React from 'react';
-import { createContext, useContext, useReducer, useState } from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
+
 import reducer from './VideoReducer';
 import { items } from '../youtube-videos-mock.json';
 
-//const { items } = mockedData;
+// const { items } = mockedData;
 
 const initialState = {
   search: 'wizeline',

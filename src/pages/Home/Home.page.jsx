@@ -13,7 +13,7 @@ function HomePage() {
     event.preventDefault();
     logout();
     history.push('/');
-  }*/
+  } */
 
   return (
     <section className="homepage" ref={sectionRef}>
