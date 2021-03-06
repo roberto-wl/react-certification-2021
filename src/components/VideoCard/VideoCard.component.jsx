@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router';
 
 const Container = styled.div`
   width: 345px;
@@ -51,10 +52,12 @@ const Desc = styled.p`
   letter-spacing: 0.01071em;
 `;
 
-const VideoCard = ({ image, title, desc }) => {
+const VideoCard = ({ image, title, desc, id }) => {
+  const history = useHistory();
+
   return (
-    <Container>
-      <Button>
+    <Container key={id}>
+      <Button onClick={() => history.push(`/viewer/${id}`)}>
         <Image image={image} />
         <TextArea>
           <Title>{title}</Title>

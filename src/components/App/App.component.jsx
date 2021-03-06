@@ -7,9 +7,9 @@ import LoginPage from '../../pages/Login';
 import NotFound from '../../pages/NotFound';
 import SecretPage from '../../pages/Secret';
 import Private from '../Private';
-import Fortune from '../Fortune';
 import Layout from '../Layout';
 import VideoProvider from '../../state';
+import ViewerPage from '../../pages/Viewer';
 
 function App() {
   return (
@@ -27,11 +27,13 @@ function App() {
               <Private exact path="/secret">
                 <SecretPage />
               </Private>
+              <Route exact path="/viewer/:id">
+                <ViewerPage />
+              </Route>
               <Route path="*">
                 <NotFound />
               </Route>
             </Switch>
-            <Fortune />
           </Layout>
         </VideoProvider>
       </AuthProvider>

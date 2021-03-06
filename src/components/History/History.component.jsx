@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'react-uuid';
 
 import { useVideo } from '../../state';
 
@@ -10,8 +11,8 @@ function History() {
     <div>
       <h3>Search History</h3>
       <ul>
-        {history.map((item, i) => (
-          <li key={`${item}-${i}`}>{item}</li>
+        {history.map((item) => (
+          <li key={uuid()}>{item}</li>
         ))}
       </ul>
     </div>

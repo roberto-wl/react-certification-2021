@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { useAuth } from '../../providers/Auth';
 import './Home.styles.css';
 import VideosList from '../../components/VideosList';
+import History from '../../components/History';
 
 function HomePage() {
   //  const history = useHistory();
@@ -17,7 +18,8 @@ function HomePage() {
 
   return (
     <section className="homepage" ref={sectionRef}>
-      <VideosList title="Welcome to the Challenge!" />
+      <VideosList listTitle="Welcome to the Challenge!" />
+      <History />
       {authenticated ? <></> : <></>}
     </section>
   );

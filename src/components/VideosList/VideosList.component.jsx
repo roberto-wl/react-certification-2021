@@ -17,19 +17,36 @@ const Title = styled.h2`
 
 const List = styled.div``;
 
-function VideosListComponent({ title }) {
+function VideosListComponent({ listTitle }) {
   const { state } = useVideo();
   const { list } = state;
 
   return (
     <Container>
-      <Title>{title}</Title>
+      <Title>{listTitle}</Title>
       <List>
         {list
           .filter(({ id: { kind } }) => kind === 'youtube#video')
-          .map(({ snippet: { title, description, thumbnails: { medium: { url } } } }) => (
-            <VideoCard image={url} title={title} desc={description} />
-          ))}
+          .map(
+            ({
+              snippet: {
+                title,
+                description,
+                thumbnails: {
+                  medium: { url },
+                },
+              },
+              id: { videoId },
+            }) => (
+              <VideoCard
+                image={url}
+                title={title}
+                desc={description}
+                id={videoId}
+                key={videoId}
+              />
+            )
+          )}
       </List>
     </Container>
   );

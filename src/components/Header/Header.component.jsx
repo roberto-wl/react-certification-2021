@@ -165,9 +165,7 @@ function HeaderComponent() {
             <ToggleButton />
           </ToggleLabel>
         </ToggleDiv>
-        <label>
-          <span>Dark mode</span>
-        </label>
+        <span>Dark mode</span>
       </NavBar>
     </Header>
   );
